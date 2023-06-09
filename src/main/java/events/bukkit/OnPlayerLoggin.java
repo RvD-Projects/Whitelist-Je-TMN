@@ -60,7 +60,7 @@ public class OnPlayerLoggin implements Listener {
         final String ds_srvName = this.plugin.getDiscordManager().getServerName();
         final String ds_inviteUrl = this.plugin.getDiscordManager().getInviteUrl();
         return "§c§lThis server is under Discord® Whitelist!§l" +
-                "§a\n\nJoin §l" + ds_srvName + "§a at: §9§n§l" + ds_inviteUrl +
+                "§a\n\nJoin §l" + ds_srvName + "§a at: §9§n§l" + "https://discord.tempcity.click" +
                 "§f\n\n§lServer Version: §f" + version +
                 "§f\n\n§lServer Address: §f" + ip;
     }
