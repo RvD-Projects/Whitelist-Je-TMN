@@ -1,5 +1,6 @@
 //modifié
 
+
 package configs;
 
 import java.util.HashMap;
@@ -9,7 +10,7 @@ public final class ConfigManager {
     /////////////////////////// EDIT THE PRIVATE VARS ONLY \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
     private final String envType="production";
-    private final String discordBotToken="MTA5MTg2OTM0MDI0MjAxODMyNA.G8Qz7R.GDvtlQrp-T3PCitHqCuRwWMfNzcO2dOKRiqn_w";
+    private final String discordBotToken="xxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
     private final String discordServerId="770057600867237898";
     private final String discordWelcomeChanelId="1088581487470850140";
