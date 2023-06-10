@@ -10,7 +10,7 @@ public final class ConfigManager {
     /////////////////////////// EDIT THE PRIVATE VARS ONLY \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
     private final String envType="production";
-    private final String discordBotToken="xxxxxxxxxxxxxxxxxxxxxxxxxxx";
+    private final String discordBotToken="MTExNjgzODA4NTgwODg5ODE5OQ.G_s-hm.sTsCOOSusS3WMPanyrwPxZ1edf3_Ix2cjwCR5E";
 
     private final String discordServerId="770057600867237898";
     private final String discordWelcomeChanelId="1088581487470850140";
@@ -46,7 +46,7 @@ public final class ConfigManager {
     private final String pluginVersion="2023.3";
 
     // FR, EN, FR_EN, EN_FR
-    private final String defaultLang="EN";
+    private final String defaultLang="FR";
 
     /////////////////////////// EDIT THE PRIVATE VARS ONLY \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
