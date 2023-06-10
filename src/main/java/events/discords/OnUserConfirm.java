@@ -1,4 +1,5 @@
 //modifié
+
 package events.discords;
 
 import java.util.List;
@@ -38,7 +39,7 @@ public class OnUserConfirm extends ListenerAdapter {
             final boolean alreadyConfirmed = plugin.playerIsConfirmed(UUID.fromString(uuid)) > 0;
 
             if(alreadyConfirmed) {
-                event.reply("✔️ Vos comptes sont déjà reliés et Whitelister.\n Minecraft-UUID: " + uuid).submit(true);
+                event.reply("✔️ Your accounts are already linked & whitelisted.\n Minecraft-UUID: " + uuid).submit(true);
                 event.getMessage().editMessage("All good").setActionRows(ActionRow.of(
                     Button.primary("All good", "✔️ All good").asDisabled()
                 )).submit(true);
