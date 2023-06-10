@@ -4,6 +4,6 @@ main: main.WhitelistJe
 api-version: 1.15
 author: Izocel
 commands:
-   wje-link:
+   wlink:
       description: Used to authenticate your Discord and Minecraft accounts.
-      usage: /<wje-link-command>
+      usage: /<wlink-command>
