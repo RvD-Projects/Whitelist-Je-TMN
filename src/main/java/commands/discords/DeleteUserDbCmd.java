@@ -146,21 +146,11 @@ public class DeleteUserDbCmd extends WjeUserOnlyCmd {
                 b_ids.add(bedData.getJSONObject(i).getString("uuid"));
                 plugin.getBukkitManager().banPlayer(b_ids.get(i).getAsString());
             }
-<<<<<<< HEAD
-
-            JSONArray javaData = lookupBdUser.toJson().optJSONArray("javaData") ;
-            if(javaData != null) {
-                for (i = 0; i < javaData.length(); i++) {
-                    plugin.getBukkitManager().banPlayer(javaData.getJSONObject(i).getString("uuid"));
-                }
-                sb.append("Deleted`" + i + "` Becrock® accounts\n");
-=======
-            sb.append("Deleted `" + i + "` Becrock® accounts --> `" + b_ids.toString() + "`\n");
+            sb.append("Deleted `" + i + "` Bedrock® accounts --> `" + b_ids.toString() + "`\n");
 
             for (i = 0; i < javaData.length(); i++) {
                 j_ids.add(javaData.getJSONObject(i).getString("uuid"));
                 plugin.getBukkitManager().banPlayer(j_ids.get(i).getAsString());
->>>>>>> origin/latest-stable
             }
             sb.append("Deleted `" + i + "`  Java® accounts --> `"+ j_ids.toString() + "`\n");
 
