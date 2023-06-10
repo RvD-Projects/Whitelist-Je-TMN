@@ -10,7 +10,7 @@ public final class ConfigManager {
     /////////////////////////// EDIT THE PRIVATE VARS ONLY \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
     private final String envType="production";
-    private final String discordBotToken="MTExNjgzODA4NTgwODg5ODE5OQ.G_s-hm.sTsCOOSusS3WMPanyrwPxZ1edf3_Ix2cjwCR5E";
+    private final String discordBotToken="xxxxxxxxxxxxxxxxxxxxx";
 
     private final String discordServerId="770057600867237898";
     private final String discordWelcomeChanelId="1088581487470850140";
@@ -47,6 +47,7 @@ public final class ConfigManager {
 
     // FR, EN, FR_EN, EN_FR
     private final String defaultLang="FR";
+    private final String confirmLinkCmdName="wlink";
 
     /////////////////////////// EDIT THE PRIVATE VARS ONLY \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -83,6 +84,7 @@ public final class ConfigManager {
         configs.put("hoursToConfirmMcAccount", this.hoursToConfirmMcAccount);
         configs.put("minecrafInfosLink", this.minecrafInfosLink);
         configs.put("defaultLang", this.defaultLang);
+        configs.put("confirmLinkCmdName", this.confirmLinkCmdName);
     }
 
     public String get(String key, String defaultValue) {
