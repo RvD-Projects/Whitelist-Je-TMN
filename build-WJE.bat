@@ -32,6 +32,7 @@ cd %BUILDER%
 copy /y %BUILDER%\src\main\java\configs\ConfigManager.java %BUILDER%\backups\ConfigManager.bck
 copy /y %BUILDER%\build-WJE.bat %BUILDER%\backups\build-WJE.bck
 copy /y %BUILDER%\launch.bat %BUILDER%\backups\launch.bck
+copy /y %BUILDER%\launch.bat %BUILDER%\backups\debug_launch.bck
 copy /y %BUILDER%\src\main\resources\plugin.yml %BUILDER%\backups\plugin.bck
 copy /y %BUILDER%\pom.xml %BUILDER%\backups\pom.bck
 
@@ -42,4 +43,3 @@ call mvn --version
 call mvn clean install package
 
 echo Job's done look if BUILD SUCCES...
-exit 0
