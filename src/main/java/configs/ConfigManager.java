@@ -42,7 +42,6 @@ public final class ConfigManager {
     private final String hoursToConfirmMcAccount="48"; // zero to not use this feature
 
     private final String minecrafInfosLink="https://www.fiverr.com/rvdprojects";
-
     private final String pluginVersion="2023.3";
 
     // FR, EN, FR_EN, EN_FR

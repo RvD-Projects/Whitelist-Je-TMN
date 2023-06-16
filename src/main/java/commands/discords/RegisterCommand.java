@@ -227,7 +227,6 @@ public class RegisterCommand extends BaseCmd {
         event.reply(replyJava + "\n\n" + replyBedrock).setEphemeral(true).submit(true);
         tx.setData("state", "Registration request sent succesfully.");
         tx.finish(SpanStatus.OK);
-
     }
 
     @Override
@@ -399,9 +398,9 @@ public class RegisterCommand extends BaseCmd {
                     confirmed, pseudo);
 
             if (!ok) {
-                event.reply(LOCAL.useDefault("CMD_ERROR") 
-                    + " --> " + LOCAL.useDefault("WARN_REGISTRATIONDELAY"))
-                    .setEphemeral(true).submit(true);
+                event.reply(LOCAL.useDefault("CMD_ERROR")
+                        + " --> " + LOCAL.useDefault("WARN_REGISTRATIONDELAY"))
+                        .setEphemeral(true).submit(true);
                 return;
             }
 
