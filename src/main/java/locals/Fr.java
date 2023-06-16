@@ -154,7 +154,7 @@ public enum Fr {
     ROLE_NOT_ALLOWED("🔒 Dommage vous n'avez pas les roles nécéssaires... 🔒"),
 
     // MISC
-    SERVER_IS_UP("Le serveur est up and running boyyssss!"),
+    SERVER_IS_UP("Le Serveur & la Whitelist sont Up & Running! -Raf & We"),
 
     ;
 
