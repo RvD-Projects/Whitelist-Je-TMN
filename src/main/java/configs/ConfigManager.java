@@ -10,7 +10,7 @@ public final class ConfigManager {
     /////////////////////////// EDIT THE PRIVATE VARS ONLY \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
     private final String envType="production";
-    private final String discordBotToken="MTExNjgzODA4NTgwODg5ODE5OQ.GIxZWH.ZE5AZVJyYjTW7NoEN-JxpbUbVzyO7pEUi2wtDw";
+    private final String discordBotToken="xxxxxxx";
 
     private final String discordServerId="770057600867237898";
     private final String discordWelcomeChanelId="1088581487470850140";
@@ -30,8 +30,11 @@ public final class ConfigManager {
     private final String dbName="minecraft";
     private final String dbUser="minecraft";
     private final String dbPass="h6u9effkcj735vcypxxj8durh9rjzkjz";
+
+
     private final String dbDefTable="wje_users";
-    private final String dbJdbcUrl="jdbc:" + dbType + "://"+ dbHost + ":" + dbPort + "/" + dbName;
+    private final String dbJdbcUrl="jdbc:" + dbType + "://"+ dbHost + ":" + dbPort 
+    + "/" + dbName;
     private final String dbMaxConnection="15";
     private final String dbMaxConnectionIDLE="5";
 
@@ -47,7 +50,7 @@ public final class ConfigManager {
 
     // FR, EN, FR_EN, EN_FR
     private final String defaultLang="EN";
-    private final String confirmLinkCmdName="wlink";
+    private final String confirmLinkCmdName="wje-link";
 
     /////////////////////////// EDIT THE PRIVATE VARS ONLY \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
