@@ -1,5 +1,3 @@
-//modifié
-
 package locals;
 
 public enum En {
@@ -116,8 +114,8 @@ public enum En {
     REGISTER_CMD_NOT_FOUND_UUID("❌ **Your `%s` UUID could not be found on the servers...**"),
     REGISTER_CMD_ERROR("❌ **Sorry, the registration for your `%s` account, could not be completed.**"),
 
-    //MINECRAFT_CMD
-    CMD_LINK("wlink"),
+    // MINECRAFT_CMD
+    CMD_LINK("wje-link"),
 
     // DISCORD CMD
     CMD_SERVER("server"),
@@ -126,6 +124,8 @@ public enum En {
     CMD_SETLOCAL("language"),
     CMD_FETCHDB_USERS("members"),
     CMD_REMOVEDB_USERS("remove"),
+
+
     //PARAMS
     PARAM_PJAVA("java"),
     PARAM_PBEDR("bedrock"),

@@ -116,7 +116,7 @@ public enum Es {
     REGISTER_CMD_ERROR("❌ **Disculpe, la registracion para su apodo `%s` no se ha podido realizar bien.**"),
 
     //MINECRAFT_CMD
-    CMD_LINK("wlink"),
+    CMD_LINK("wje-link"),
 
     // DISCORD CMD
     CMD_SERVER("servidor"),
