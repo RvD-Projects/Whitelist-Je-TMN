@@ -65,7 +65,7 @@ public class ConfirmLinkCmd extends PlayerBaseCmd {
       userLang = user.getLang();
 
       if (isConfirmed) {
-        final String msg = LOCAL.translateBy("MINECRAFT_ALREADYREGISTERED", userLang) + "\n" +
+        final String msg = LOCAL.translateBy("MINECRAFT_ALREADYCONFIRMED", userLang) + "\n" +
             LOCAL.translateBy("LABEL_DISCORD_ID", userLang) + ": " + user.getDiscordId();
         player.sendMessage(msg);
 
@@ -90,9 +90,11 @@ public class ConfirmLinkCmd extends PlayerBaseCmd {
         tx.finish(SpanStatus.PERMISSION_DENIED);
         return;
       }
-
+      
       Member member = plugin.getGuildManager().findMember(user.getDiscordId());
       this.sendConfimationEmbeded(member, player, userLang);
+      final String msg = LOCAL.translateBy("MINECRAFT_CONFIRMATIONONITSWAY", userLang);
+      player.sendMessage(msg);
 
     } catch (Exception e) {
       player.sendMessage(LOCAL.translateBy("CMD_ERROR", userLang));
@@ -147,7 +149,7 @@ public class ConfirmLinkCmd extends PlayerBaseCmd {
     final String mcUuidLabel = LOCAL.translateBy("LABEL_MINECRAFT_UUID", lang);
     final String policy = LOCAL.translateBy("EMBD_LINK_POLICY", lang);
 
-    final String embedUrl = this.configs.get("minecrafInfosLink", "https://www.fiverr.com/rvdprojects?up_rollout=true");
+    final String embedUrl = this.configs.get("minecraftInfosLink");
 
     final String jsonEmbeded = """
     {
@@ -190,8 +192,8 @@ public class ConfirmLinkCmd extends PlayerBaseCmd {
   private String confirmationActions(String channel_id, String lang) {
     LocalManager LOCAL = WhitelistJe.LOCALES;
 
-    final String YES = '"' + LOCAL.translateBy("EMBD_LINK_YESME", lang) + '"';
-    final String NO = '"' + LOCAL.translateBy("EMBD_LINK_NOTME", lang) + '"';
+    final String WORD_YES = '"' + LOCAL.translateBy("EMBD_LINK_YESME", lang) + '"';
+    final String WORD_NO = '"' + LOCAL.translateBy("EMBD_LINK_NOTME", lang) + '"';
 
     final String jsonEmbeded = """
     {
@@ -201,14 +203,14 @@ public class ConfirmLinkCmd extends PlayerBaseCmd {
           "components": [
             {
               "style": "4",
-              "label": """ + NO + "," + """
+              "label": """ + WORD_NO + "," + """
               "custom_id": '""" + rejectId + "'," + """
               "disabled": false,
               "type": "2"
             },
             {
               "style": "3",
-              "label": """ + YES + "," + """
+              "label": """ + WORD_YES + "," + """
               "custom_id": '""" + acceptId + "'," + """
               "disabled": false,
               "type": "2"

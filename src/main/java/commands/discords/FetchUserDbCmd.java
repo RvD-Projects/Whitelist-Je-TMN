@@ -1,7 +1,10 @@
 package commands.discords;
 
+import java.util.HashMap;
+
 import org.json.JSONArray;
 
+import dao.DaoManager;
 import discord.GuildManager;
 import io.sentry.SpanStatus;
 import main.WhitelistJe;
@@ -55,33 +58,50 @@ public class FetchUserDbCmd extends WjeUserOnlyCmd {
                 tx.setData("state", "not-allowed");
                 tx.finish(SpanStatus.PERMISSION_DENIED);
                 return;
-
             }
-            
+
             final StringBuilder sb = new StringBuilder();
             final OptionMapping userParam = event.getOption(LOCAL.translate(KEY_PARAM_USER));
             // All users
-            if(userParam == null) {
-                final JSONArray data = plugin.updateAllPlayers();
+            if (userParam == null) {
+                final HashMap<String, String> fetchedUserIds = new HashMap<>();
+                final JSONArray minecraftData = plugin.updateAllPlayers();
 
                 sb.append("Here's all the Minecraft users data:\n");
                 sendMsgToUser(sb.toString());
+                sb.delete(0, sb.length());
 
-                for (int i = 0; i < data.length(); i++) {
-                    sendMsgToUser("```json\n" +  data.getJSONObject(i).toString(1) + "\n```");
+                for (int i = 0; i < minecraftData.length(); i++) {
+                    final Integer userId = minecraftData.getJSONObject(i).getInt("user_id");
+
+                    if (fetchedUserIds.containsValue(userId.toString())) {
+                        continue;
+                    }
+
+                    fetchedUserIds.put(userId.toString(), userId.toString());
+                    final org.json.JSONObject userData = DaoManager.getUsersDao().find(userId);
+                    final String userJson = new User(userData).toJson().toString(1);
+                    sb.append(userJson);
+
                 }
-                
+
+                if (sb.toString().length() < 1980) {
+                    sendMsgToUser("```json\n" + sb.toString() + "\n```");
+                } else {
+                    sendMsgToUser(sb.toString(), "members.json");
+                }
+
                 submitReplyEphemeral("Infos's been sent to your private messages");
                 tx.setData("state", "success-multiple");
                 tx.finish(SpanStatus.OK);
                 return;
             }
-            
+
             final Member lookUpMember = userParam.getAsMember();
-            final User lookupBdUser =  User.getFromMember(lookUpMember);
+            final User lookupBdUser = User.getFromMember(lookUpMember);
 
             // Single user NOT-FOUND
-            if(lookupBdUser == null) {
+            if (lookupBdUser == null) {
                 sb.append("User's not registered (no data to show)...");
 
                 submitReplyEphemeral(sb.toString());
@@ -107,7 +127,6 @@ public class FetchUserDbCmd extends WjeUserOnlyCmd {
             tx.finish(SpanStatus.INTERNAL_ERROR);
             SentryService.captureEx(e);
         }
-
     }
 
 }
