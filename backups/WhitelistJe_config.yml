@@ -1,13 +1,13 @@
 discord:
-  botToken: xxxxxxxxxxxxxxxxx
+  botToken: MTExNjgzODA4NTgwODg5ODE5OQ.GQogSU.N3dzLgY8ciqbWGT4SDOXk6DdmtuTA7q4S6WNoY
   serverId: "770057600867237898"
   channels:
     {
       welcomeChanelId: "1088581487470850140",
       adminChanelId: "1060368458816172112",
-      whitelistChanelId: "1091582563971248149",
-      botLogChannelId: "927283856053252106",
-      javaLogChannelId: "927283856053252106",
+      whitelistChanelId: "1060368458816172112",
+      botLogChannelId: "1060368458816172112",
+      javaLogChannelId: "1060368458816172112",
     }
   roles:
     {
@@ -40,5 +40,5 @@ misc:
   {
     confirmLinkCmdName: wje-link,
     minecraftInfosLink: "https://www.fiverr.com/rvdprojects",
-    serverContactEmail: "webdevteam@rvdprojects.com"
+    serverContactEmail: webdevteam@rvdprojects.com,
   }
