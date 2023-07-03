@@ -58,7 +58,7 @@ public class VoteCmd extends PlayerBaseCmd {
       final String link = LOCAL.translateBy(VoteCmd.linkKey, userLang);
       final String msg = LOCAL.translateBy(VoteCmd.messageKey, userLang);
 
-      this.sendDiscordVoteLink(member, player, msg, link);
+      this.sendVotesLinks(member, player, msg, link);
 
     } catch (Exception e) {
       player.sendMessage(LOCAL.translateBy("CMD_ERROR", userLang));
@@ -73,7 +73,7 @@ public class VoteCmd extends PlayerBaseCmd {
     tx.finish(SpanStatus.OK);
   }
 
-  private void sendDiscordVoteLink(Member member, Player player, String msg, String link) {
+  private void sendVotesLinks(Member member, Player player, String msg, String link) {
     final String discordId = member.getUser().getId();
 
     final JSONObject clickEvent = new JSONObject();
