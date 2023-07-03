@@ -147,5 +147,12 @@ public class Es extends DTraductionMaps {
                 "❌ Esta orden está reservada para usuarios registrados por Discord®.");
         this.DEFAULTS.put("ROLE_NOT_ALLOWED", "🔒 Lastima que no tiene los rollos necesarios... 🔒");
         this.DEFAULTS.put("SERVER_IS_UP", "El servidor sirve!");
+
+
+        // custom
+        this.DEFAULTS.put("CMD_VOTE", "votar");
+        this.DEFAULTS.put("DESC_VOTE", "Se utiliza para obtener información relacionada con la votación de los jugadores.");
+        this.DEFAULTS.put("VOTE_TITLE", "¡Haz clic aquí para votar por tu jugador favorito!");
+        this.DEFAULTS.put("VOTE_LINK", "https://tempcity.click/vote");
     }
 }

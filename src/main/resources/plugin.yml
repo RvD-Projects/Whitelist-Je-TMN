@@ -7,3 +7,6 @@ commands:
    wje-link:
       description: Used to authenticate your Discord and Minecraft accounts.
       usage: /wje-link
+   vote:
+      description: Used to get infos related to player voting.
+      usage: /vote

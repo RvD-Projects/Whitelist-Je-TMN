@@ -137,5 +137,11 @@ public class En extends DTraductionMaps {
         this.DEFAULTS.put("ROLE_NOT_ALLOWED", "🔒 Too bad you don't have the necessary roles... 🔒");
         this.DEFAULTS.put("SERVER_IS_UP", "The server is up and running boys!");
 
+
+        // custom
+        this.DEFAULTS.put("CMD_VOTE", "vote");
+        this.DEFAULTS.put("DESC_VOTE", "Used to get infos related to player voting.");
+        this.DEFAULTS.put("VOTE_TITLE", "Click here to vote for your favorite player !");
+        this.DEFAULTS.put("VOTE_LINK", "https://tempcity.click/vote");
     }
 }

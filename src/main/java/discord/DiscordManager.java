@@ -13,6 +13,7 @@ import commands.discords.LookupMcPlayerCommand;
 import commands.discords.RegisterCommand;
 import commands.discords.ServerCommand;
 import commands.discords.SetUserLanguageCmd;
+import commands.discords.VoteCommand;
 import configs.ConfigManager;
 import events.discords.OnGuildMemberJoin;
 import events.discords.OnGuildMemberRemove;
@@ -20,7 +21,6 @@ import events.discords.OnGuildMemberUpdate;
 import events.discords.OnUserConfirm;
 import io.sentry.ISpan;
 import io.sentry.SpanStatus;
-import locals.Lang;
 import locals.LocalManager;
 import main.WhitelistJe;
 import net.dv8tion.jda.api.JDA;
@@ -174,6 +174,12 @@ public class DiscordManager {
                 LOCAL.setNextLang(langArr[i]);
                 // User db remove
                 DeleteUserDbCmd.REGISTER_CMD(jda, plugin);
+            }
+
+            for (int i = 0; i < langArr.length; i++) {
+                LOCAL.setNextLang(langArr[i]);
+                // Vote
+                VoteCommand.REGISTER_CMD(jda, plugin);
             }
 
         } catch (Exception e) {

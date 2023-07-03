@@ -137,5 +137,12 @@ public class Fr extends DTraductionMaps {
         this.DEFAULTS.put("USERONLY_CMD", "❌ Cette commande est réservée aux utilisateurs enregistrés par Discord®.");
         this.DEFAULTS.put("ROLE_NOT_ALLOWED", "🔒 Dommage vous n'avez pas les roles nécéssaires... 🔒");
         this.DEFAULTS.put("SERVER_IS_UP", "Le serveur est up and running boyyssss!");
+        
+
+        // custom
+        this.DEFAULTS.put("CMD_VOTE", "voter");
+        this.DEFAULTS.put("DESC_VOTE", "Utilisé pour obtenir des informations relatives au vote des joueurs.");
+        this.DEFAULTS.put("VOTE_TITLE", "Cliquez ici pour voter pour votre joueur préféré !");
+        this.DEFAULTS.put("VOTE_LINK", "https://tempcity.click/vote");
     }
 }

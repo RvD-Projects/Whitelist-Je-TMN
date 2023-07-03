@@ -49,9 +49,9 @@ public class ConfirmLinkCmd extends PlayerBaseCmd {
         final String msg = LOCAL.translate("NOTREGISTERED") + "\n" +
             LOCAL.translate("USERONLY_CMD") + "\n" +
             LOCAL.translate("DOREGISTER") + " :: " + LOCAL.translate("CONTACT_ADMNIN");
-        player.sendMessage(msg);
+        player.kickPlayer(msg);
 
-        tx.setData("state", "player not yet registered");
+        tx.setData("state", "player not registered");
         tx.finish(SpanStatus.OK);
         return;
       }

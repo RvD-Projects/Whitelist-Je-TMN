@@ -203,10 +203,13 @@ public class Helper {
         return end > now;
     }
 
-    public static MessageAction preparePrivateCustomMsg(PrivateChannel channel, MessageEmbed embededs,
+    public static MessageAction preparePrivateCustomMsg(PrivateChannel channel, MessageEmbed embedded,
             ArrayList<ActionRow> actionRows) {
-        if (embededs.isSendable()) {
-            return channel.sendMessageEmbeds(embededs).setActionRows(actionRows);
+        if (embedded.isSendable()) {
+
+            return actionRows == null 
+                ? channel.sendMessageEmbeds(embedded)
+                : channel.sendMessageEmbeds(embedded).setActionRows(actionRows);
         }
         return null;
     }
